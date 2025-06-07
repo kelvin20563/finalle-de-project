@@ -1,4 +1,4 @@
-      // Collapsible FAQ functionality
+      
 document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
         const faqItem = question.parentElement;
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let cardWidth = cards[0].offsetWidth;
             let slidesToShow = 1;
             
-            // Determine how many slides to show based on screen width
+            
             function updateSlidesToShow() {
                 if (window.innerWidth >= 1024) {
                     slidesToShow = 3;
