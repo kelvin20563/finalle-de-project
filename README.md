@@ -54,3 +54,7 @@ Efficient CSS with variables for consistency
 Minimal JavaScript for essential interactions
 
 Proper semantic HTML structure
+
+ https://kelvin20563.github.io/finalle-de-project/
+ 
+ 
