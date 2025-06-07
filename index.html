@@ -1,1 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven Café</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-3xl font-bold" style="color: var(--coffee-700);">Brew Haven</div>
+            </div>
+            <div class="mt-4 md:mt-0 flex gap-8">
+                <a href="#home" style="color: var(--coffee-700);" class="hover:opacity-75 transition">Home</a>
+                <a href="#about" style="color: var(--coffee-700);" class="hover:opacity-75 transition">About</a>
+                <a href="#menu" style="color: var(--coffee-700);" class="hover:opacity-75 transition">Menu</a>
+                <a href="#testimonials" style="color: var(--coffee-700);" class="hover:opacity-75 transition">Reviews</a>
+                <a href="#partners" style="color: var(--coffee-700);" class="hover:opacity-75 transition">Partners</a>
+                <a href="#faq" style="color: var(--coffee-700);" class="hover:opacity-75 transition">FAQ</a>
+                <a href="#contact" style="color: var(--coffee-700);" class="hover:opacity-75 transition">Contact</a>
+            </div>
+            <button class="mt-4 md:mt-0 px-6 py-2 rounded-full transition" style="background-color: var(--coffee-600); color: white;">Reserve a Table</button>
+        </nav>
+    </header>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Discover the Art of <span class="text-amber-300">Perfect Coffee</span></h1>
+            <p class="text-xl max-w-2xl mx-auto mb-10">Experience specialty coffee in a warm, inviting atmosphere where every cup tells a story.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="px-8 py-3 rounded-full font-semibold" style="background-color: #e0b000; color: var(--coffee-900);">View Our Menu</button>
+                <button class="bg-transparent border-2 border-white px-8 py-3 rounded-full hover:bg-white hover:text-coffee-800 transition">Book a Tasting</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-6" style="color: var(--coffee-800);">Our Coffee Journey</h2>
+                <p class="mb-6" style="color: var(--coffee-700);">Founded in 2010, Brew Haven began as a small passion project between friends who shared a love for exceptional coffee. Today, we've grown into a community hub where coffee enthusiasts gather to savor carefully crafted beverages.</p>
+                <p class="mb-8" style="color: var(--coffee-700);">We source our beans directly from ethical farms across South America and Africa, roasting them in-house to bring out their unique characteristics. Every cup is brewed with precision and care by our skilled baristas.</p>
+                <div class="flex gap-4">
+                    <button class="px-6 py-2 rounded-full transition" style="background-color: var(--coffee-700); color: white;">Our Story</button>
+                    <button class="border-2 px-6 py-2 rounded-full transition" style="border-color: var(--coffee-700); color: var(--coffee-700);">Meet Our Team</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Coffee beans" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Barista making coffee" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden col-span-2">
+                    <img src="https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80" alt="Cafe interior" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20" style="background-color: var(--coffee-200);">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--coffee-800);">Our Specialty Menu</h2>
+                <p class="max-w-2xl mx-auto" style="color: var(--coffee-700);">From classic espresso to innovative seasonal creations, each drink is crafted with premium ingredients and expert technique.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold" style="color: var(--coffee-800);">Espresso Classics</h3>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #fef3c7; color: #92400e;">Bestseller</span>
+                        </div>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex justify-between border-b pb-3" style="border-color: var(--coffee-100);">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Espresso</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Pure, concentrated coffee</p>
+                                </div>
+                                <span class="font-semibold">$3.50</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-3" style="border-color: var(--coffee-100);">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Cappuccino</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Espresso with steamed milk</p>
+                                </div>
+                                <span class="font-semibold">$4.75</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-3" style="border-color: var(--coffee-100);">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Latte</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Espresso with steamed milk</p>
+                                </div>
+                                <span class="font-semibold">$5.00</span>
+                            </li>
+                            <li class="flex justify-between pb-2">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Mocha</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Chocolate espresso</p>
+                                </div>
+                                <span class="font-semibold">$5.50</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold" style="color: var(--coffee-800);">Seasonal Specialties</h3>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex justify-between border-b pb-3" style="border-color: var(--coffee-100);">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Pumpkin Spice Latte</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Seasonal favorite</p>
+                                </div>
+                                <span class="font-semibold">$6.00</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-3" style="border-color: var(--coffee-100);">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Iced Lavender Mocha</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Floral and refreshing</p>
+                                </div>
+                                <span class="font-semibold">$6.25</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-3" style="border-color: var(--coffee-100);">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Maple Pecan Latte</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Autumn special</p>
+                                </div>
+                                <span class="font-semibold">$5.75</span>
+                            </li>
+                            <li class="flex justify-between pb-2">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Cold Brew Tonic</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Refreshing summer drink</p>
+                                </div>
+                                <span class="font-semibold">$5.50</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 3 -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold" style="color: var(--coffee-800);">Pastries & Treats</h3>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex justify-between border-b pb-3" style="border-color: var(--coffee-100);">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Croissant</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Buttery and flaky</p>
+                                </div>
+                                <span class="font-semibold">$3.50</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-3" style="border-color: var(--coffee-100);">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Cinnamon Roll</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Freshly baked daily</p>
+                                </div>
+                                <span class="font-semibold">$4.50</span>
+                            </li>
+                            <li class="flex justify-between border-b pb-3" style="border-color: var(--coffee-100);">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Chocolate Brownie</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Rich and fudgy</p>
+                                </div>
+                                <span class="font-semibold">$4.00</span>
+                            </li>
+                            <li class="flex justify-between pb-2">
+                                <div>
+                                    <h4 class="font-semibold" style="color: var(--coffee-800);">Blueberry Muffin</h4>
+                                    <p class="text-sm" style="color: var(--coffee-600);">Bursting with berries</p>
+                                </div>
+                                <span class="font-semibold">$3.75</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 rounded-full font-semibold" style="background-color: var(--coffee-700); color: white;">View Full Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--coffee-800);">What Our Customers Say</h2>
+                <p class="max-w-2xl mx-auto" style="color: var(--coffee-600);">Read genuine experiences from our community</p>
+            </div>
+            
+            <div class="reviews-container">
+                <div class="reviews-track">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://randomuser.me/api/portraits/women/32.jpg');"></div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Sarah Johnson</h4>
+                                    <div class="flex text-amber-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-coffee-700">"The best latte I've ever had! The atmosphere is perfect for working or catching up with friends. Their seasonal pumpkin spice latte is absolutely divine."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://randomuser.me/api/portraits/men/54.jpg');"></div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Michael Chen</h4>
+                                    <div class="flex text-amber-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-coffee-700">"As a coffee enthusiast, I'm impressed by their single-origin pour-overs. The baristas are knowledgeable and passionate. The cold brew tonic is my summer favorite!"</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://randomuser.me/api/portraits/women/67.jpg');"></div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Emma Rodriguez</h4>
+                                    <div class="flex text-amber-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-coffee-700">"The perfect neighborhood café! I come here every Saturday morning. Their almond croissants are to die for, and the mocha is perfectly balanced - not too sweet."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://randomuser.me/api/portraits/men/22.jpg');"></div>
+                                <div>
+                                    <h4 class="font-bold text-lg">David Wilson</h4>
+                                    <div class="flex text-amber-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-coffee-700">"I've tried coffee shops all over the city, and Brew Haven stands out. Their attention to detail in both drinks and service is exceptional. The lavender mocha is a must-try!"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="review-nav review-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="review-nav review-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Pagination Dots -->
+                <div class="review-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section id="partners" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--coffee-800);">Our Trusted Partners</h2>
+                <p class="max-w-2xl mx-auto" style="color: var(--coffee-600);">We work with the best suppliers to bring you exceptional coffee experiences</p>
+            </div>
+            
+            <div class="partners-slider">
+                <div class="partners-track">
+                    <!-- Partner Logos -->
+                    <div class="logo-card">
+                        <i class="fas fa-coffee text-4xl mb-2"></i>
+                        <p class="font-semibold">Bean Co.</p>
+                    </div>
+                    <div class="logo-card">
+                        <i class="fas fa-bread-slice text-4xl mb-2"></i>
+                        <p class="font-semibold">Sweet Bakery</p>
+                    </div>
+                    <div class="logo-card">
+                        <i class="fas fa-cheese text-4xl mb-2"></i>
+                        <p class="font-semibold">Dairy Delight</p>
+                    </div>
+                    <div class="logo-card">
+                        <i class="fas fa-cookie text-4xl mb-2"></i>
+                        <p class="font-semibold">Cookie Haven</p>
+                    </div>
+                    <div class="logo-card">
+                        <i class="fas fa-mug-hot text-4xl mb-2"></i>
+                        <p class="font-semibold">Mug & Co</p>
+                    </div>
+                    <div class="logo-card">
+                        <i class="fas fa-ice-cream text-4xl mb-2"></i>
+                        <p class="font-semibold">Frosty Treats</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--coffee-800);">Frequently Asked Questions</h2>
+                <p class="max-w-2xl mx-auto" style="color: var(--coffee-600);">Find answers to common questions about our cafe, coffee, and services.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="text-xl font-semibold" style="color: var(--coffee-800);">How do I make a reservation?</h3>
+                        <div class="faq-icon" style="color: #e0b000;">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="mt-4" style="color: var(--coffee-700);">You can make a reservation through our website, by calling us directly at (555) 123-4567, or by visiting our cafe in person. We recommend booking at least 24 hours in advance for weekend brunches and special events.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="text-xl font-semibold" style="color: var(--coffee-800);">Do you offer gluten-free options?</h3>
+                        <div class="faq-icon" style="color: #e0b000;">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="mt-4" style="color: var(--coffee-700);">Yes, we have a variety of gluten-free pastries and snacks available daily. Our menu clearly marks gluten-free items, and our staff is trained to answer any dietary questions you may have. Please note that while we take precautions, our kitchen does handle gluten-containing ingredients.</p>
+                    </div>
+                </div>
+            
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="text-xl font-semibold" style="color: var(--coffee-800);">Where do you source your coffee beans?</h3>
+                        <div class="faq-icon" style="color: #e0b000;">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="mt-4" style="color: var(--coffee-700);">We partner directly with small scale farmers in Colombia, Ethiopia, and Brazil who practice sustainable farming. Our beans are ethically sourced through Fair Trade agreements, and we roast them in-house weekly to ensure maximum freshness and flavor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20" style="background-color: var(--coffee-100);">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6" style="color: var(--coffee-800);">We'd Love to Hear From You</h2>
+                    <p class="mb-8" style="color: var(--coffee-700);">Have questions about our coffee, want to book an event, or just want to say hello? Reach out anytime.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full mr-4" style="background-color: #fef3c7;">
+                                <i class="fas fa-map-marker-alt text-xl" style="color: #e0b000;"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold" style="color: var(--coffee-800);">Location</h4>
+                                <p style="color: var(--coffee-700);"> 406 Coffee Street, parklands,Kenya</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full mr-4" style="background-color: #fef3c7;">
+                                <i class="fas fa-phone text-xl" style="color: #e0b000;"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold" style="color: var(--coffee-800);">Phone</h4>
+                                <p style="color: var(--coffee-700);">+254(7) 00350007</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full mr-4" style="background-color: #fef3c7;">
+                                <i class="fas fa-envelope text-xl" style="color: #e0b000;"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold" style="color: var(--coffee-800);">Email</h4>
+                                <p style="color: var(--coffee-700);">hello@brewhaven.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full mr-4" style="background-color: #fef3c7;">
+                                <i class="fas fa-clock text-xl" style="color: #e0b000;"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold" style="color: var(--coffee-800);">Hours</h4>
+                                <p style="color: var(--coffee-700);">Monday-Friday: 7am-7pm</p>
+                                <p style="color: var(--coffee-700);">Saturday-Sunday: 8am-8pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--coffee-800);">Send Us a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block mb-2" style="color: var(--coffee-700);">Name</label>
+                            <input type="text" class="w-full p-3 rounded-lg focus:outline-none focus:ring-2" style="border: 1px solid var(--coffee-300);">
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2" style="color: var(--coffee-700);">Email</label>
+                            <input type="email" class="w-full p-3 rounded-lg focus:outline-none focus:ring-2" style="border: 1px solid var(--coffee-300);">
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2" style="color: var(--coffee-700);">Message</label>
+                            <textarea rows="4" class="w-full p-3 rounded-lg focus:outline-none focus:ring-2" style="border: 1px solid var(--coffee-300);"></textarea>
+                        </div>
+                        
+                        <button class="w-full py-3 rounded-lg font-semibold transition" style="background-color: var(--coffee-700); color: white;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <footer class="py-12" style="background-color: var(--coffee-800); color: white;">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Brew Haven</h3>
+                    <p class="mb-6" style="color: var(--coffee-200);">Specialty coffee crafted with passion and precision in the heart of Brewville.</p>
+                    <div class="flex gap-4">
+                        <a href="#" style="color: var(--coffee-200);" class="hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" style="color: var(--coffee-200);" class="hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" style="color: var(--coffee-200);" class="hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" style="color: var(--coffee-200);" class="hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Explore</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" style="color: var(--coffee-200);" class="hover:text-white transition">Our Story</a></li>
+                        <li><a href="#" style="color: var(--coffee-200);" class="hover:text-white transition">Coffee Menu</a></li>
+                        <li><a href="#" style="color: var(--coffee-200);" class="hover:text-white transition">Brewing Guides</a></li>
+                        <li><a href="#" style="color: var(--coffee-200);" class="hover:text-white transition">Events</a></li>
+                        <li><a href="#" style="color: var(--coffee-200);" class="hover:text-white transition">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" style="color: var(--coffee-200);" class="hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" style="color: var(--coffee-200);" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" style="color: var(--coffee-200);" class="hover:text-white transition">Shipping & Returns</a></li>
+                        <li><a href="#" style="color: var(--coffee-200);" class="hover:text-white transition">Gift Cards</a></li>
+                        <li><a href="#" style="color: var(--coffee-200);" class="hover:text-white transition">Wholesale</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="mb-4" style="color: var(--coffee-200);">Subscribe for exclusive offers, brewing tips, and coffee news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="flex-grow px-4 py-2 rounded-l-lg" style="color: var(--coffee-800);">
+                        <button class="px-4 py-2 rounded-r-lg transition" style="background-color: #e0b000;">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 text-center" style="border-top: 1px solid var(--coffee-700); color: var(--coffee-400);">
+                <p>&copy; 2025 Brew Haven Café. All rights reserved.</p>
+                <div class="mt-4 flex justify-center gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
