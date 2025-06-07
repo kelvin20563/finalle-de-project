@@ -6,7 +6,100 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
 });
 
-// Partner carousel functionality
+// 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.testimonial-track');
+            const cards = document.querySelectorAll('.testimonial-card');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            
+            let currentIndex = 0;
+            let cardWidth = cards[0].offsetWidth;
+            let slidesToShow = 1;
+            
+            // Determine how many slides to show based on screen width
+            function updateSlidesToShow() {
+                if (window.innerWidth >= 1024) {
+                    slidesToShow = 3;
+                } else if (window.innerWidth >= 768) {
+                    slidesToShow = 2;
+                } else {
+                    slidesToShow = 1;
+                }
+                cardWidth = cards[0].offsetWidth;
+                goToSlide(currentIndex);
+            }
+            
+            // Initialize
+            updateSlidesToShow();
+            
+            // Go to specific slide
+            function goToSlide(index) {
+                // Ensure index stays within bounds
+                if (index < 0) {
+                    index = cards.length - slidesToShow;
+                } else if (index > cards.length - slidesToShow) {
+                    index = 0;
+                }
+                
+                currentIndex = index;
+                const offset = -currentIndex * cardWidth;
+                track.style.transform = `translateX(${offset}px)`;
+                
+                // Update dots
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[currentIndex].classList.add('active');
+            }
+            
+            // Next slide
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Dot navigation
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    goToSlide(index);
+                });
+            });
+            
+            // Auto slide
+            let autoSlide = setInterval(nextSlide, 5000);
+            
+            // Pause on hover
+            const slider = document.querySelector('.testimonial-slider');
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(autoSlide);
+            });
+            
+            slider.addEventListener('mouseleave', () => {
+                autoSlide = setInterval(nextSlide, 5000);
+            });
+            
+            // Update on window resize
+            window.addEventListener('resize', () => {
+                updateSlidesToShow();
+            });
+        });
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.getElementById('carousel');
     const prevBtn = document.getElementById('prevBtn');
