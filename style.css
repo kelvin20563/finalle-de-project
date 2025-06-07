@@ -1,1 +1,227 @@
+:root {
+    --coffee-100: #f5ebe0;
+    --coffee-200: #e6d5c3;
+    --coffee-300: #d4c0a1;
+    --coffee-400: #c2ab8e;
+    --coffee-500: #a68a64;
+    --coffee-600: #8b6b46;
+    --coffee-700: #6f5738;
+    --coffee-800: #55432a;
+    --coffee-900: #3a2f1c;
+}
 
+.hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-item {
+    transition: all 0.3s ease;
+}
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card {
+    background: linear-gradient(to bottom right, var(--coffee-100), var(--coffee-200));
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--coffee-200);
+    padding: 20px 0;
+}
+.faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Partners slider */
+.partners-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.partners-track {
+    display: flex;
+    animation: slide 30s linear infinite;
+    width: 200%;
+}
+
+.partner-logo {
+    height: 80px;
+    width: auto;
+    margin: 0 40px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--coffee-100);
+    color: var(--coffee-800);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Customer Reviews Section */
+.reviews-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.reviews-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.review-card {
+    flex: 0 0 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.review-content {
+    background: linear-gradient(to bottom right, var(--coffee-100), var(--coffee-200));
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.review-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--coffee-700);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.review-nav:hover {
+    opacity: 1;
+}
+
+.review-prev {
+    left: 10px;
+}
+
+.review-next {
+    right: 10px;
+}
+
+.review-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.review-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--coffee-300);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.review-dot.active {
+    background: var(--coffee-700);
+}
+
+@media (min-width: 768px) {
+    .review-card {
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .review-card {
+        flex: 0 0 33.333%;
+    }
+}
+
+/* Partners section adjustments */
+.logo-card {
+    height: 150px;
+    width: 200px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: var(--coffee-700);
+    transition: all 0.3s ease;
+}
+
+.logo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.partners-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide 30s linear infinite;
+    width: 200%;
+}
